@@ -1,0 +1,352 @@
+/* ==================== VIDEO ==================== */
+
+.about__video{
+    padding-bottom: 0;
+}
+
+.about__video-container{
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    z-index: -2;
+    padding-bottom: 0;
+}
+
+/* ==================== ACHIEVEMENTS ==================== */
+
+.about__achievements-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+
+.about__achievements-right > p{
+    margin: 1.6rem 0 2.5rem;
+}
+
+.about__achievements-left{
+    background: var(--color-bg1);
+    padding: 1rem;
+    width: 100%;
+    transition: var(--transition);
+    border-radius: 1rem;
+}
+
+.about__achievements-left:hover {
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.achievements__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.achievement__card{
+    background: var(--color-bg1);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.achievement__card:hover{
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.achievement__icon{
+    background: var(--color-warning);
+    padding: 0.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.achievement__card:nth-child(2) .achievement__icon{
+    background: var(--color-success);
+}
+
+.achievement__card:nth-child(3) .achievement__icon{
+    background: var(--color-primary);
+}
+
+.achievement__card p{
+    margin-top: 1rem;
+}
+
+/* ==================== LOCATIONS ==================== */
+
+.about__locations{
+    padding-block: 3rem 0;
+    transition: var(--transition);
+}
+
+.about__locations:hover {
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.team{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.about__locations h2{
+    margin-bottom: 3rem;
+}
+
+.about__locations-container {
+    position: relative;
+    padding-top: 1.5rem;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.about__locations-img-container{
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+.about__locations-wrapper{
+    background: var(--color-bg2);
+    padding-bottom: 1rem;
+}
+
+#location-img {
+    display: block;
+    object-fit: cover;
+    position: relative;
+}
+
+.image {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.image__img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+
+.image__overlay--primary {
+    background: var(--color-primary);
+}
+
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+    opacity: .75;
+}
+
+.image__overlay:hover > * {
+    transform: translateY(0);
+}
+
+.image__description {
+    font-size: 1.25em;
+}
+
+.image__description:hover {
+    font-size: 1.3em;
+    transition: 1s ease-in-out;
+}
+
+#address1 {
+    margin-bottom: 0.25rem;
+}
+
+#address2 {
+    margin-bottom: 0.1rem;
+}
+
+#address3{
+    margin-bottom: 0.5rem; 
+}
+
+#info {
+    margin-bottom: 0.75rem;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.prev-btn,
+.next-btn {
+    font-size: 1.25rem;
+    background: transparent;
+    border-color: transparent;
+    margin: 0 0.5rem;
+    transition: var(--transition);
+    cursor: pointer;
+    color: var(--color-white);
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    color: var(--color-primary);
+}
+
+/* ==================== TEAM ==================== */
+
+.team{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.team__container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.team__member{
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    border-radius: 1rem solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.team__member:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.team__member-image img{
+    filter: saturate(0);
+}
+
+.team__member-image:hover img{
+    filter: saturate(1);
+}
+
+.team__member-info *{
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.team__member-info p{
+    color: var(--color-light);
+}
+
+.team__member-socials{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+.team__member:hover .team__member-socials{
+    right: 0;
+}
+
+.team__member-socials a{
+    padding: 1rem;
+}
+
+/* ==================== MEDIA QUERIES (TABLET) ==================== */
+
+@media screen and (max-width: 1024px){
+
+    .about__achievements{
+        margin-top: 2rem;
+    }
+
+    .about__achievements-container{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .about__achievements-left{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .image__img {
+        display: block;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .team__container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .team__member{
+        padding: 1rem;
+    }
+}
+
+/* ==================== MEDIA QUERIES (PHONE) ==================== */
+
+@media screen and (max-width: 600px){
+    .achievements__cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .image__img {
+        display: block;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .team__container{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .team__member{
+        padding: 0;
+    }
+
+    .team__member p{
+        margin-bottom: 1.5rem;
+    }
+}
